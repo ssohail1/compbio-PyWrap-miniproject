@@ -50,22 +50,13 @@ def fastqdcode(sra):
     sracommand = './fastq-dump -I --split-files ' + sra
     #print(sracommand)
     with open('miniproject.log','a') as output: 
-        output.write(sracommand)
+        output.write(sracommand + '\n')
         output.close()
     os.system(sracommand)
     
 fastqdcode('SRR8185310.sra')
 '''
 
-#def sra_uncompress(*sra):
-#    sracommand = './fastq-dump -I --split-files *.sra'
-#    os.system(sracommand)
-
-#def prefetch2(SRR):
-#    prefetchcommand = './prefetch --option-file ' + SRR
-#    os.system(prefetchcommand)
-#    sracommand = './fastq-dump -I --split-files *.sra'
-#    os.system(sracommand)
 
 outputpath = '/Users/sidra/Downloads/sratoolkit.3.0.0-mac64/bin/'
 def run_spades(outputpath,rtype='se',*readfiles):
@@ -83,4 +74,4 @@ def run_spades(outputpath,rtype='se',*readfiles):
             #print(spadescommand)
     return(os.path.exists(outputpath+'/results'))
             
-#prefetch(infile)
+# run_spades(outputpath,rtype='se','SRR.fastq')
