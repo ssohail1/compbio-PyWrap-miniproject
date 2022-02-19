@@ -65,6 +65,7 @@ fastqdcode('SRR8185310.sra')
 #    sracommand = './fastq-dump -I --split-files *.sra'
 #    os.system(sracommand)
 
+''' Got this part to work too!
 # change to where you want results folder to be located
 outputpath = '/Users/sidra/Downloads/COMP_383-483_compbio/COMPBIO_MiniProject'
 def run_spades(outputpath,rtype='se',*readfiles):
@@ -110,3 +111,4 @@ for i in infile:
     count += len(i)
 with open('miniproject.log','a') as output:
     output.write('There are ' + str(count) + ' bp in the assembly.' + '\n')
+'''
