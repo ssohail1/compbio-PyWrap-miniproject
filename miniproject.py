@@ -54,11 +54,10 @@ def run_spades(outputpath,rtype='se',*readfiles):
             spadescommand += ' -k 33,55,77,99,127 -t 2' + ' --only-assembler -s ' + readfiles[0] + ' -o ' + outputpath + '/results'
             print(spadescommand)
             with open('miniproject.log','a') as output: 
-                output.write(spadescommand + '\n')
+                output.write(spadescommand)
                 output.close()
             os.system(spadescommand)
             #print(spadescommand)
-    #os.system(spadescommand)
     return(os.path.exists(outputpath+'/results'))
             
 run_spades(outputpath,'se','SRR8185310_1.fastq')
