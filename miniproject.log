@@ -1,0 +1,11 @@
+spades.py -k 33,55,77,99,127 -t 2 --only-assembler -s SRR8185310_1.fastq -o /Users/sidra/Downloads/COMP_383-483_compbio/COMPBIO_MiniProject/results
+There are 131 contigs > 1000 in the assembly.
+spades.py -k 33,55,77,99,127 -t 2 --only-assembler -s SRR8185310_1.fastq -o /Users/sidra/Downloads/COMP_383-483_compbio/COMPBIO_MiniProject/results
+There are 131 contigs > 1000 in the assembly.
+There are 4541263 bp in the assembly.
+spades.py -k 33,55,77,99,127 -t 2 --only-assembler -s SRR8185310_1.fastq -o /Users/sidra/Downloads/COMP_383-483_compbio/COMPBIO_MiniProject/results
+There are 131 contigs > 1000 in the assembly.
+There are 4541263 bp in the assembly.
+spades.py -k 33,55,77,99,127 -t 2 --only-assembler -s SRR8185310_1.fastq -o /Users/sidra/Downloads/COMP_383-483_compbio/COMPBIO_MiniProject/results
+There are 131 contigs > 1000 in the assembly.
+There are 4541263 bp in the assembly.
