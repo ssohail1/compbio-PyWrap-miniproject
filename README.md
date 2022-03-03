@@ -1,7 +1,7 @@
 # compbio-PyWrap-miniproject
 ## Sidra Sohail
 ### Installation
-'git clone https://github.com/ssohail1/compbio-PyWrap-miniproject.git'
+git clone https://github.com/ssohail1/compbio-PyWrap-miniproject.git
 ### Required Software and Libraries
 - Python: OS, csv
 - [SRA ToolKit](https://github.com/ncbi/sra-tools/wiki/01.-Downloading-SRA-Toolkit#sra-toolkit)
