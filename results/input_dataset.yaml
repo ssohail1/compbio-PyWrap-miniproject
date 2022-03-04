@@ -1,0 +1,4 @@
+- "number": !!int "1"
+  "single reads":
+  - "/Users/sidra/Downloads/COMP_383-483_compbio/COMPBIO-miniProj/SRR8185310_1.fastq"
+  "type": "single"

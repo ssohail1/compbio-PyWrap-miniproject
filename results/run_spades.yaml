@@ -1,0 +1,108 @@
+- STAGE: Before start
+  args: []
+  config_dir: ''
+  del_after:
+  - .bin_reads
+  - tmp/spades_13h1z8_4
+  - configs
+  output_files: []
+  path: 'true'
+  short_name: before_start
+- STAGE: Assembling
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: as_start
+- STAGE: K33
+  args:
+  - /Users/sidra/Downloads/COMP_383-483_compbio/COMPBIO-miniProj/results/K33/configs/config.info
+  config_dir: K33
+  del_after: []
+  output_files: []
+  path: /Users/sidra/SPAdes-3.15.4-Darwin/bin/spades-core
+  short_name: k33
+- STAGE: K55
+  args:
+  - /Users/sidra/Downloads/COMP_383-483_compbio/COMPBIO-miniProj/results/K55/configs/config.info
+  config_dir: K55
+  del_after: []
+  output_files: []
+  path: /Users/sidra/SPAdes-3.15.4-Darwin/bin/spades-core
+  short_name: k55
+- STAGE: K77
+  args:
+  - /Users/sidra/Downloads/COMP_383-483_compbio/COMPBIO-miniProj/results/K77/configs/config.info
+  config_dir: K77
+  del_after: []
+  output_files: []
+  path: /Users/sidra/SPAdes-3.15.4-Darwin/bin/spades-core
+  short_name: k77
+- STAGE: K99
+  args:
+  - /Users/sidra/Downloads/COMP_383-483_compbio/COMPBIO-miniProj/results/K99/configs/config.info
+  config_dir: K99
+  del_after: []
+  output_files: []
+  path: /Users/sidra/SPAdes-3.15.4-Darwin/bin/spades-core
+  short_name: k99
+- STAGE: Copy files
+  args:
+  - /Users/sidra/SPAdes-3.15.4-Darwin/share/spades/spades_pipeline/scripts/copy_files.py
+  - /Users/sidra/Downloads/COMP_383-483_compbio/COMPBIO-miniProj/results/K99/before_rr.fasta
+  - /Users/sidra/Downloads/COMP_383-483_compbio/COMPBIO-miniProj/results/before_rr.fasta
+  - /Users/sidra/Downloads/COMP_383-483_compbio/COMPBIO-miniProj/results/K99/assembly_graph_after_simplification.gfa
+  - /Users/sidra/Downloads/COMP_383-483_compbio/COMPBIO-miniProj/results/assembly_graph_after_simplification.gfa
+  - /Users/sidra/Downloads/COMP_383-483_compbio/COMPBIO-miniProj/results/K99/final_contigs.fasta
+  - /Users/sidra/Downloads/COMP_383-483_compbio/COMPBIO-miniProj/results/contigs.fasta
+  - /Users/sidra/Downloads/COMP_383-483_compbio/COMPBIO-miniProj/results/K99/first_pe_contigs.fasta
+  - /Users/sidra/Downloads/COMP_383-483_compbio/COMPBIO-miniProj/results/first_pe_contigs.fasta
+  - /Users/sidra/Downloads/COMP_383-483_compbio/COMPBIO-miniProj/results/K99/strain_graph.gfa
+  - /Users/sidra/Downloads/COMP_383-483_compbio/COMPBIO-miniProj/results/strain_graph.gfa
+  - /Users/sidra/Downloads/COMP_383-483_compbio/COMPBIO-miniProj/results/K99/scaffolds.fasta
+  - /Users/sidra/Downloads/COMP_383-483_compbio/COMPBIO-miniProj/results/scaffolds.fasta
+  - /Users/sidra/Downloads/COMP_383-483_compbio/COMPBIO-miniProj/results/K99/scaffolds.paths
+  - /Users/sidra/Downloads/COMP_383-483_compbio/COMPBIO-miniProj/results/scaffolds.paths
+  - /Users/sidra/Downloads/COMP_383-483_compbio/COMPBIO-miniProj/results/K99/assembly_graph_with_scaffolds.gfa
+  - /Users/sidra/Downloads/COMP_383-483_compbio/COMPBIO-miniProj/results/assembly_graph_with_scaffolds.gfa
+  - /Users/sidra/Downloads/COMP_383-483_compbio/COMPBIO-miniProj/results/K99/assembly_graph.fastg
+  - /Users/sidra/Downloads/COMP_383-483_compbio/COMPBIO-miniProj/results/assembly_graph.fastg
+  - /Users/sidra/Downloads/COMP_383-483_compbio/COMPBIO-miniProj/results/K99/final_contigs.paths
+  - /Users/sidra/Downloads/COMP_383-483_compbio/COMPBIO-miniProj/results/contigs.paths
+  config_dir: ''
+  del_after:
+  - .bin_reads
+  - tmp/spades_xjr5dwvx
+  output_files: []
+  path: /Users/sidra/opt/anaconda3/bin/python
+  short_name: copy_files
+- STAGE: Assembling
+  args: []
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: 'true'
+  short_name: as_finish
+- STAGE: Breaking scaffolds
+  args:
+  - /Users/sidra/SPAdes-3.15.4-Darwin/share/spades/spades_pipeline/scripts/breaking_scaffolds_script.py
+  - --result_scaffolds_filename
+  - /Users/sidra/Downloads/COMP_383-483_compbio/COMPBIO-miniProj/results/scaffolds.fasta
+  - --misc_dir
+  - /Users/sidra/Downloads/COMP_383-483_compbio/COMPBIO-miniProj/results/misc
+  - --threshold_for_breaking_scaffolds
+  - '3'
+  config_dir: ''
+  del_after: []
+  output_files: []
+  path: /Users/sidra/opt/anaconda3/bin/python
+  short_name: bs
+- STAGE: Terminate
+  args: []
+  config_dir: ''
+  del_after:
+  - configs
+  output_files: []
+  path: 'true'
+  short_name: terminate

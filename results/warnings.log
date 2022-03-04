@@ -1,0 +1,5 @@
+
+=== Error correction and assembling warnings:
+ * 0:00:52.234   190M / 299M  WARN    General                 (kmer_coverage_model.cpp   : 327)   Valley value was estimated improperly, reset to 4
+ * 0:00:54.700   163M / 303M  WARN    General                 (simplification.cpp        : 504)   The determined erroneous connection coverage threshold may be determined improperly
+======= Warnings saved to /Users/sidra/Downloads/COMP_383-483_compbio/COMPBIO-miniProj/results/warnings.log
