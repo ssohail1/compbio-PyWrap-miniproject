@@ -207,7 +207,7 @@ os.system(copycommand)
 
 # running tophat
 indexname = 'ecoli'
-fastq = 'SRR8185310_1'
+fastq = 'SRR8185310_1.fastq'
 # this fastq file is from url1
 fastq2 = 'ecoli.fastq'
 # this fasta file is from contigs.fasta output from SPAdes with NC_000913 file as input
