@@ -17,6 +17,6 @@
 - miniproj_runall.py: python script to run analyses using the available tools
 
 ### Running the program
-To run this program, move the SRR files to the compbio-PyWrap-miniproject folder:
+To run this program, move the SRR files to the compbio-PyWrap-miniproject folder:  
 `mv SRRfile compbio-PyWrap-miniproject`
 
