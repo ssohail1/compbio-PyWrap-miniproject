@@ -1,6 +1,10 @@
 # compbio-PyWrap-miniproject
 ## Sidra Sohail
-### Installation
+
+## Introduction
+
+
+## Installation
 Clone repository into personal directory using this command,  
 `git clone https://github.com/ssohail1/compbio-PyWrap-miniproject.git`  
 
@@ -9,8 +13,10 @@ To move into compbio-PyWrap-miniproject directory use cd,
 
 ## Required Software and Libraries
 - Python: 
-    - OS: https://docs.python.org/3/library/os.html
-    - csv: https://docs.python.org/3/library/csv.html
+    - [OS](https://docs.python.org/3/library/os.html)
+    - [csv](https://docs.python.org/3/library/csv.html)
+    - [Biopython](http://biopython.org/DIST/docs/tutorial/Tutorial.html)
+    The Biopython package that is used within the program is SeqIO.
 - [SRA ToolKit](https://github.com/ncbi/sra-tools/wiki/01.-Downloading-SRA-Toolkit)
 - [SPAdes](https://github.com/ablab/spades)
 - [GeneMark](http://exon.gatech.edu/GeneMark/license_download.cgi)
