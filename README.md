@@ -48,7 +48,7 @@ All output will be in results folder.
 | contigsthousand.fasta     | Modified contigs.fasta file: This is the contig file that only has contigs that are greater than 1000 bp in length |
 | predictseqs.fasta         | Output from GeneMark: This fasta file has the predicted protein sequences for the identified genes|
 | predict_functionality.csv | Output from BLAST: This is a CSV file that identifies the predicted function of each coding region |
-| accepted_hits.bam         | Output from TopHat: |
-| fpkm file                 | Output from Cufflinks: |
+| accepted_hits.bam         | Output from TopHat: A list of read alignments in SAM format |
+| fpkm file                 | Output from Cufflinks: Is the counts of mapped fragments over total mapped fragments which is multiplied by exon length of transcript |
 
 
