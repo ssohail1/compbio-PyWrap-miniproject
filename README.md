@@ -7,7 +7,7 @@ Clone repository into personal directory using this command,
 To move into compbio-PyWrap-miniproject directory use cd,  
 `cd compbio-PyWrap-miniproject`
 
-### Required Software and Libraries
+## Required Software and Libraries
 - Python: 
     - OS: https://docs.python.org/3/library/os.html
     - csv: https://docs.python.org/3/library/csv.html
@@ -31,6 +31,6 @@ If you will implement this program for a different SRR file, simply change the '
 Move the SRR file to the compbio-PyWrap-miniproject folder:  
 `mv SRRfile compbio-PyWrap-miniproject`
 
-## Outputs
+##= Outputs
 - SPAdes output will be in results folder within compbio-PyWrap-miniproject directory
 - TopHat output will be in out folder within compbio-PyWrap-miniproject directory
