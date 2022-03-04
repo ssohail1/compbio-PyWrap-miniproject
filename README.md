@@ -21,13 +21,13 @@ To move into compbio-PyWrap-miniproject directory use cd,
 - [SRA ToolKit](https://github.com/ncbi/sra-tools/wiki/01.-Downloading-SRA-Toolkit)
 - [SPAdes](https://github.com/ablab/spades)
 - [GeneMark](http://exon.gatech.edu/GeneMark/license_download.cgi)
-- [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi) [BLAST Command Line](https://www.ncbi.nlm.nih.gov/books/NBK279690/)
+- [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi) | [BLAST Command Line](https://www.ncbi.nlm.nih.gov/books/NBK279690/)
 - [Bowtie2](https://ccb.jhu.edu/software/tophat/manual.shtml)
 - [TopHat2](http://ccb.jhu.edu/software/tophat/index.shtml)
 - [Cufflinks](http://cole-trapnell-lab.github.io/cufflinks/)
 
 ## Running the program for Test Data
-To run the program for test data SRR8185310:  
+To run the program for test data SRR8185310 and SRR1411276:  
 `python miniproj_runall.py`
 
 This program will only work for single-end reads.
