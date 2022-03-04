@@ -85,8 +85,25 @@ def download_files(url,output):
     curlfunc = 'curl '
     curlfunc += url + ' --output ' + output
     os.system(curlfunc)
-    gzipfunc = 'gunzip ' + output
-    os.system(gzipfunc)
+    if output[-2] == 'gz':
+        gzipfunc = 'gunzip ' + output
+        os.system(gzipfunc)
+    
+def tophat_func(indexname,fastqfile1,fasta,fastqfile2):
+    '''first run bowtie2-build to build the index which will be used as index to 
+    tophat2'''
+    bowtiecmd = 'bowtie2-build '
+    bowtiecmd += fasta + ' ' + indexname
+    os.system(bowtiecmd)
+    '''the indexname and fastqfiles prefix should be same'''
+    tophatcmd = 'tophat2'
+    tophatcmd += ' --no-novel-juncs -o tophat2_output/ ' + indexname + ' ' + fastqfile1 + ' ' + fastqfile2
+    os.system(tophatcmd)
+    
+def cufflinks_func(gtffile,tophatbamfile):
+    cufflinkscmd = 'cufflinks'
+    cufflinkscmd += '  -o cufflinks_output -G ' + gtffile + ' ' + tophatbamfile
+    os.system(cufflinkscmd)
 
 
 # ------------ Running the Functions ------------
@@ -155,13 +172,19 @@ filename = 'predict_functionality.csv'
 headers = ['Query sequence ID', 'Subject sequence ID', '% Identity','% Query Coverage']
 # parsing blastp output with the given headers
 x = parse_blast(filename,headers)
-
+for i in range(0,len(x)):
+    with open('predictfunc.csv','a') as output:
+        output.write(x[i])
+        
 # Write out the discrepancy to the log file
 len(x)
+# if the length of x is greater than 4140 then found additional CDS
 if len(x) > 4140:
     num = len(x)-4140
     with open('miniproject.log','a') as output:
         output.write('GeneMarkS found ' + str(num) + ' additional CDS than the RefSeq.' + '\n')
+        
+# if the length of x is less than 4140 then found fewer CDS
 if len(x) < 4140:
     num = 4140-len(x)
     with open('miniproject.log','a') as output:
@@ -181,33 +204,21 @@ outpath = os.getcwd()
 readfiles = 'ecoli.fa'
 run_spades2(outpath, 'se', readfiles)
 
+currentdir = os.getcwd()   
+direct = '/results2/contigs.fasta'
+copycommand = 'cp ' + currentdir + direct + ' ' + currentdir + '/ecoli.fa'
+os.system(copycommand)
 
-def tophat_func(indexname,fastqfile,fasta):
-    '''first run bowtie2-build to build the index which will be used as index to 
-    tophat2'''
-    bowtiecmd = 'bowtie2-build '
-    bowtiecmd += fasta + ' ' + indexname
-    os.system(bowtiecmd)
-    '''the indexname and fastqfile prefix should be same'''
-    tophatcmd = 'tophat2'
-    tophatcmd += ' --no-novel-juncs -o tophat2_output/ ' + indexname + ' ' + fastqfile
-    os.system(tophatcmd)
-
+# running tophat
 indexname = 'ecoli'
+fastq = 'SRR8185310_1'
 # this fastq file is from url1
-fastq = 'ecoli.fastq'
+fastq2 = 'ecoli.fastq'
 # this fasta file is from contigs.fasta output from SPAdes with NC_000913 file as input
 fasta = 'ecoli.fa'
-tophat_func(indexname,fastq,fasta)
+tophat_func(indexname,fastq,fasta,fastq2)
 
-
-#gtffile = 'e_coli.gtf'
-
-def cufflinks_func(gtffile,tophatbamfile):
-    cufflinkscmd = 'cufflinks'
-    cufflinkscmd += '  -o cufflinks_output -G ' + gtffile + ' ' + tophatbamfile
-    os.system(cufflinkscmd)
-
+# running cufflinks
 # this gtffile is output from GeneMark 
 gtffile = 'e_coli.gtf'
 # this file is output from running the tophat2 command
@@ -215,3 +226,45 @@ tophatbamfile = 'accepted_hits.bam'
 cufflinks_func(gtffile, tophatbamfile)
 
 
+# Moving all output to results folder
+currentdir = os.getcwd()   
+direct = '/predictfunc.csv'
+dirs = currentdir + '/results'
+movecommand = 'mv ' + currentdir + direct + ' ' + dirs
+os.system(movecommand)
+
+currentdir = os.getcwd()   
+direct = '/predictseqs.fasta'
+dirs = currentdir + '/results'
+movecommand = 'mv ' + currentdir + direct + ' ' + dirs
+os.system(movecommand)
+
+currentdir = os.getcwd()   
+direct = '/GMS2.mod'
+dirs = currentdir + '/results'
+movecommand = 'mv ' + currentdir + direct + ' ' + dirs
+os.system(movecommand)
+
+currentdir = os.getcwd()   
+direct = '/e_coli.gtf'
+dirs = currentdir + '/results'
+movecommand = 'mv ' + currentdir + direct + ' ' + dirs
+os.system(movecommand)
+
+currentdir = os.getcwd()   
+direct = '/results2'
+dirs = currentdir + '/results'
+movecommand = 'mv ' + currentdir + direct + ' ' + dirs
+os.system(movecommand)
+
+currentdir = os.getcwd()   
+direct = '/tophat2_output'
+dirs = currentdir + '/results'
+movecommand = 'mv ' + currentdir + direct + ' ' + dirs
+os.system(movecommand)
+
+currentdir = os.getcwd()   
+direct = '/cufflinks_output'
+dirs = currentdir + '/results'
+movecommand = 'mv ' + currentdir + direct + ' ' + dirs
+os.system(movecommand)
