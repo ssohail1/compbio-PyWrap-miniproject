@@ -28,5 +28,5 @@ Move the SRR file to the compbio-PyWrap-miniproject folder:
 `mv SRRfile compbio-PyWrap-miniproject`
 
 ### Outputs
-- Output from SPAdes will be in results folder within compbio-PyWrap-miniproject directory
-- Output from TopHat will be in out folder within compbio-PyWrap-miniproject directory
+- SPAdes output will be in results folder within compbio-PyWrap-miniproject directory
+- TopHat output will be in out folder within compbio-PyWrap-miniproject directory
