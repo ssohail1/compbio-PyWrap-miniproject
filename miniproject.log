@@ -1,8 +1,6 @@
 spades.py -k 33,55,77,99,127 -t 2 --only-assembler -s SRR8185310_1.fastq -o /Users/sidra/Downloads/COMP_383-483_compbio/COMPBIO-miniProj/results
 There are 131 contigs > 1000 in the assembly.
 There are 4541263 bp in the assembly.
-gms2.pl --seq contigsthousand.fasta --genome-type bacteria --faa predictseqs.fasta
-gmhmmp2 --seq contigsthousand.fasta --format gtf --out e_coli.gtf --mod GMS2.mod
 GeneMarkS found 12 additional CDS than the RefSeq.
 
 
