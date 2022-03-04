@@ -172,10 +172,6 @@ filename = 'predict_functionality.csv'
 headers = ['Query sequence ID', 'Subject sequence ID', '% Identity','% Query Coverage']
 # parsing blastp output with the given headers
 x = parse_blast(filename,headers)
-for i in range(0,len(x)):
-    with open('predictfunc.csv','a') as output:
-        output.write(x[i])
-        
 # Write out the discrepancy to the log file
 len(x)
 # if the length of x is greater than 4140 then found additional CDS
@@ -233,7 +229,7 @@ cufflinks_func(gtffile, tophatbamfile)
 
 # Moving all output to results folder
 currentdir = os.getcwd()   
-direct = '/predictfunc.csv'
+direct = '/predict_functionality.csv'
 dirs = currentdir + '/results'
 movecommand = 'mv ' + currentdir + direct + ' ' + dirs
 os.system(movecommand)
