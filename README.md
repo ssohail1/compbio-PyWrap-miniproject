@@ -1,7 +1,9 @@
 # compbio-PyWrap-miniproject
 ## Sidra Sohail
 ### Installation
-`git clone https://github.com/ssohail1/compbio-PyWrap-miniproject.git`
+<pre>git clone https://github.com/ssohail1/compbio-PyWrap-miniproject.git
+<pre>
+
 ### Required Software and Libraries
 - Python: 
     - OS: https://docs.python.org/3/library/os.html
