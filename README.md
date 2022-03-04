@@ -1,8 +1,10 @@
 # compbio-PyWrap-miniproject
 ## Sidra Sohail
 ### Installation
-`git clone https://github.com/ssohail1/compbio-PyWrap-miniproject.git`
-To move into compbio-PyWrap-miniproject directory use cd,
+Clone repository into personal directory using this command,  
+`git clone https://github.com/ssohail1/compbio-PyWrap-miniproject.git`  
+
+To move into compbio-PyWrap-miniproject directory use cd,  
 `cd compbio-PyWrap-miniproject`
 
 ### Required Software and Libraries
