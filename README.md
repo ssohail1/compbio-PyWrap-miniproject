@@ -10,6 +10,7 @@
 - [SRA ToolKit](https://github.com/ncbi/sra-tools/wiki/01.-Downloading-SRA-Toolkit)
 - [SPAdes](https://github.com/ablab/spades)
 - [GeneMark](http://exon.gatech.edu/GeneMark/license_download.cgi)
+- [Bowtie2](https://ccb.jhu.edu/software/tophat/manual.shtml)
 - [TopHat](http://ccb.jhu.edu/software/tophat/index.shtml)
 - [Cufflinks](http://cole-trapnell-lab.github.io/cufflinks/)
 
@@ -17,7 +18,12 @@
 - miniproject.log: log file with commands, number of contigs greater than 1000 in length, bp in assembly of contigs greater than 1000.
 - miniproj_runall.py: python script to run analyses using the available tools
 
-### Running the program
-To run this program, move the SRR files to the compbio-PyWrap-miniproject folder:  
+### Running the program for SRR8185310
+This program will run for SRR8185310:  
+`python miniproj_runall.py`  
+
+
+If you will implement this program for a different SRR file, simply change the 'SRR8185310' in the miniproj_runall.py file to your SRR file of interest  
+Move the SRR file to the compbio-PyWrap-miniproject folder:  
 `mv SRRfile compbio-PyWrap-miniproject`
 
