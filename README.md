@@ -15,8 +15,8 @@
 - [Cufflinks](http://cole-trapnell-lab.github.io/cufflinks/)
 
 ### Files in Repo
-- miniproject.log: log file with commands, number of contigs greater than 1000 in length, bp in assembly of contigs greater than 1000.
-- miniproj_runall.py: python script to run analyses using the available tools
+- miniproject.log: log file with commands, number of contigs greater than 1000 in length, bp in assembly of contigs greater than 1000 in length.
+- miniproj_runall.py: python script to run analyses using the tools described.
 
 ### Running the program for SRR8185310
 This program will run for SRR8185310:  
