@@ -21,6 +21,7 @@ To move into compbio-PyWrap-miniproject directory use cd,
 - [SRA ToolKit](https://github.com/ncbi/sra-tools/wiki/01.-Downloading-SRA-Toolkit)
 - [SPAdes](https://github.com/ablab/spades)
 - [GeneMark](http://exon.gatech.edu/GeneMark/license_download.cgi)
+- [BLAST](url)
 - [Bowtie2](https://ccb.jhu.edu/software/tophat/manual.shtml)
 - [TopHat](http://ccb.jhu.edu/software/tophat/index.shtml)
 - [Cufflinks](http://cole-trapnell-lab.github.io/cufflinks/)
@@ -42,7 +43,11 @@ All output will be in results folder.
 
 | File                      | Description  |
 | --------------------------| ------------ |
-| contigs.fasta             | Content Cell |
-| contigsthousand.fasta     | Content Cell |
-| predictseqs.fasta         | content cell |
-| predict_functionality.csv | content cell |
+| contigs.fasta             | Output from SPAdes: these are the resulting contigs after reads assembly is completed |
+| contigsthousand.fasta     | Modified contigs.fasta file: This is the contig file that only has contigs that are greater than 1000 bp in length |
+| predictseqs.fasta         | Output from GeneMark: This fasta file has the predicted protein sequences for the identified genes|
+| predict_functionality.csv | Output from BLAST: This is a CSV file that identifies the predicted function of each coding region |
+| accepted_hits.bam         | Output from TopHat: |
+| fpkm file                 | Output from Cufflinks: |
+
+
