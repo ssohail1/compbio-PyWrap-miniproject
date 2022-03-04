@@ -218,6 +218,11 @@ fastq2 = 'ecoli.fastq'
 fasta = 'ecoli.fa'
 tophat_func(indexname,fastq,fasta,fastq2)
 
+currentdir = os.getcwd()   
+direct = '/tophat2_output/accepted_hits.bam'
+copycommand = 'cp ' + currentdir + direct + ' ' + currentdir
+os.system(copycommand)
+
 # running cufflinks
 # this gtffile is output from GeneMark 
 gtffile = 'e_coli.gtf'
