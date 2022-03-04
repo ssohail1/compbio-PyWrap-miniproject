@@ -19,7 +19,7 @@ To move into compbio-PyWrap-miniproject directory use cd,
 - [Cufflinks](http://cole-trapnell-lab.github.io/cufflinks/)
 
 ## Running the program for SRR8185310
-This program will run for SRR8185310:  
+This program will run for test data SRR8185310:  
 `python miniproj_runall.py`
 
 If you will implement this program for a different SRR file, simply change the 'SRR8185310' in the miniproj_runall.py file to your SRR file of interest  
