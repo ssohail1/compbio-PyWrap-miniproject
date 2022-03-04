@@ -16,4 +16,7 @@
 - miniproject.log: log file with commands, number of contigs greater than 1000 in length, bp in assembly of contigs greater than 1000.
 - miniproj_runall.py: python script to run analyses using the available tools
 
-### Running program
+### Running the program
+To run this program, move the SRR files to the compbio-PyWrap-miniproject folder:
+`mv SRRfile compbio-PyWrap-miniproject`
+
