@@ -7,10 +7,14 @@ The goal is to develop a Python wrapper to automate the execution of software to
 
 ## Installation
 Clone repository into personal directory using this command,  
-`git clone https://github.com/ssohail1/compbio-PyWrap-miniproject.git`  
+```
+git clone https://github.com/ssohail1/compbio-PyWrap-miniproject.git
+```
 
 To move into compbio-PyWrap-miniproject directory use cd,  
-`cd compbio-PyWrap-miniproject`
+```
+cd compbio-PyWrap-miniproject
+```
 
 ## Required Software and Libraries
 - Python: 
@@ -28,12 +32,16 @@ To move into compbio-PyWrap-miniproject directory use cd,
 
 ## Running the program for Test Data
 To run the program for test data SRR8185310 and SRR1411276:  
-`python miniproj_runall.py`
+```
+python miniproj_runall.py
+```
 
 This program will only work for single-end reads.
 If you will implement this program for a different SRR file, simply change the 'SRR8185310' in the miniproj_runall.py file to your SRR file of interest  
 Move the SRR file to the compbio-PyWrap-miniproject folder:  
-`mv SRRfile compbio-PyWrap-miniproject`
+```
+mv SRRfile compbio-PyWrap-miniproject
+```
 
 ## Files in Repo
 - miniproject.log: log file with commands, number of contigs greater than 1000 in length, bp in assembly of contigs greater than 1000 in length.
