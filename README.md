@@ -24,7 +24,7 @@ cd compbio-PyWrap-miniproject
     The Biopython package that is used within the program is SeqIO.
 - [SRA ToolKit](https://github.com/ncbi/sra-tools/wiki/01.-Downloading-SRA-Toolkit)
 - [SPAdes](https://github.com/ablab/spades)
-- [GeneMark](http://exon.gatech.edu/GeneMark/license_download.cgi)
+- [GeneMarkS-2](http://exon.gatech.edu/GeneMark/license_download.cgi)
 - [BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi) | [BLAST Command Line](https://www.ncbi.nlm.nih.gov/books/NBK279690/)
 - [Bowtie2](https://ccb.jhu.edu/software/tophat/manual.shtml)
 - [TopHat2](http://ccb.jhu.edu/software/tophat/index.shtml)
